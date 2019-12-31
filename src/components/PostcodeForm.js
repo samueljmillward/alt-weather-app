@@ -8,8 +8,18 @@ class PostcodeForm extends Component {
             zipcode: ''
         }
 
-
         this.inputUpdated = this.inputUpdated.bind(this);
+        this.submitZipCode = this.submitZipCode.bind(this);
+    }
+
+    submitZipCode(e) {
+        e.preventDefault()
+
+        const { zipcode } = this.state
+        const { onSubmit } = this.props
+
+        onSubmit(zipcode)
+        this.setState({ zipcode: '' })
     }
 
     inputUpdated(e) {
