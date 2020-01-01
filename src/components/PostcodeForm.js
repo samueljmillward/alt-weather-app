@@ -31,7 +31,7 @@ class PostcodeForm extends Component {
     render() {
         return (
             <div className="zip-form">
-                <form>
+                <form onSubmit={this.submitZipCode}>
                     <label htmlFor="zipcode">Zip Code</label>
                     <input
                         className="form-control"
