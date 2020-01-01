@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { get } from 'axios'
 import PostcodeForm from '../components/PostcodeForm'
+import WeatherList from '../components/WeatherList'
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return <div className="app">
       <PostcodeForm onSubmit={this.onFormSubmit} />
+      <WeatherList days={this.state.dates} />
     </div>
   }
 };
